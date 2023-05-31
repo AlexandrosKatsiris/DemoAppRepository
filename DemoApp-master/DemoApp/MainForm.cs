@@ -4,7 +4,7 @@ namespace DemoApp
 {
     public partial class MainForm : Form
     {
-        private bool hasClickedActivityType = false;
+        public static bool hasClickedActivityType = false;
         public MainForm()
         {
             InitializeComponent();
@@ -12,12 +12,12 @@ namespace DemoApp
 
         private void barButtonItem1_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            if(this.hasClickedActivityType == false)
+            if(hasClickedActivityType == false)
             {
-                Form1 activityTypeForm = new Form1();
+                ActivityForm activityTypeForm = new ActivityForm();
                 activityTypeForm.MdiParent = this;
                 activityTypeForm.Show();
-                this.hasClickedActivityType = true;
+                hasClickedActivityType = true;
             }
             
             
